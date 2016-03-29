@@ -22,8 +22,9 @@ dbpath={{ mdb.db_path }}
 logpath={{ mdb.log_path }}/mongodb.log
 
 logappend={{ mdb.settings.log_append | yaml_encode() }}
-
+{%- if mdb.settings.bind_ip %}
 bind_ip = {{ mdb.settings.bind_ip }}
+{%- endif %}
 port = {{ mdb.settings.port }}
 
 # Enable journaling, http://www.mongodb.org/display/DOCS/Journaling

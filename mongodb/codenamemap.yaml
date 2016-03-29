@@ -9,19 +9,6 @@ trusty:
   mongod: mongod
   conf_path: /etc/mongod.conf
 
-  mongod_settings:
-    systemLog:
-      destination: file
-      logAppend: true
-      path: /var/log/mongodb/mongod.log
-    storage:
-      dbPath: /var/lib/mongodb
-      journal:
-        enabled: true
-    net:
-      port: 27017
-      bindIp: 127.0.0.1
-
 precise:
   use_repo: True
   repo_component: multiverse
@@ -29,16 +16,3 @@ precise:
 
   mongod: mongod
   conf_path: /etc/mongod.conf
-
-  mongod_settings:
-    systemLog:
-      destination: file
-      logAppend: true
-      path: /var/log/mongodb/mongod.log
-    storage:
-      dbPath: /var/lib/mongodb
-      journal:
-        enabled: true
-    net:
-      port: 27017
-      bindIp: 127.0.0.1
